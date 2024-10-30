@@ -1,0 +1,33 @@
+<div class="user-info-bar" (click)="onUserInfoBarClick()">
+	<div class="user-info-bar--info">
+		<span class="user-info-bar--name">{{ user | fullName }}</span
+		><span class="user-info-bar--role"
+			>| {{ selectedRole?.name ? selectedRole!.name : "" }}</span
+		>
+		<mat-icon
+			*ngIf="!isDrawerOpen"
+			aria-hidden="false"
+			aria-label="arrow-down"
+			fontIcon="keyboard_arrow_down"
+		></mat-icon>
+		<mat-icon
+			*ngIf="isDrawerOpen"
+			aria-hidden="false"
+			aria-label="arrow-down"
+			fontIcon="keyboard_arrow_up"
+		></mat-icon>
+	</div>
+	<div class="user-roles-dropdown" *ngIf="isDrawerOpen">
+		<ul>
+			<li
+				*ngFor="let role of roles"
+				[ngClass]="{
+					'user-role-selected': selectedRole?.name === role.name
+				}"
+				(click)="onRoleClick(role)"
+			>
+				<span>{{ role.name }}</span>
+			</li>
+		</ul>
+	</div>
+</div>

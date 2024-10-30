@@ -14,7 +14,7 @@
 	&--user {
 		&--mobile {
 			position: relative;
-			background-color: $base-color;
+			background-color: $base-color-darker;
 			color: $font-color-dark;
 			padding: $spacing-small $spacing-medium;
 			display: none;
@@ -31,5 +31,84 @@
 			@include flex;
 			@include flex-space-between;
 		}
+	}
+}
+
+.user-info-bar {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	&--info {
+		@include flex;
+		gap: 4px;
+		&--name {
+			font-weight: 600;
+		}
+		&--name,
+		&--role {
+			font-size: $font-size-xl;
+		}
+		mat-icon {
+			font-size: 18px;
+			width: 18px;
+			height: auto;
+		}
+		@media screen and (max-width: $screen-size-desktop) {
+			&--name {
+				font-size: $font-size-s;
+			}
+			&--role {
+				font-size: $font-size-xs;
+			}
+			mat-icon {
+				font-size: 12px;
+				width: 12px;
+				height: auto;
+			}
+		}
+	}
+}
+
+.user-roles-dropdown {
+	position: absolute;
+	top: 44px;
+	right: 0px;
+	background-color: $primary-color;
+	border-radius: 0px 0px 4px 4px;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		cursor: pointer;
+		font-size: $font-size-l;
+		padding: $spacing-small $spacing-large;
+		&:hover {
+			background-color: $accent-2;
+		}
+
+		@media screen and (max-width: $screen-size-desktop) {
+			padding: $spacing-small $spacing-medium;
+			font-size: $font-size-xs;
+			&:hover {
+				background-color: $accent-1;
+			}
+		}
+	}
+	li:last-of-type {
+		border-radius: 0px 0px 4px 4px;
+	}
+
+	@media screen and (max-width: $screen-size-desktop) {
+		background-color: $base-color-darker;
+		top: 27px;
+	}
+}
+
+.user-role-selected {
+	background-color: $accent-2;
+	@media screen and (max-width: $screen-size-desktop) {
+		background-color: $accent-1;
 	}
 }

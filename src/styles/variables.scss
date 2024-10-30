@@ -18,12 +18,15 @@ $accent-3: #45ad20;
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 $font-family-base: "Open-Sans", sans-serif;
+$font-size-xl: 20px;
+$font-size-l: 18px;
 $font-size-m: 16px;
 $font-size-s: 14px;
-$font-size-xs: 10px;
-$font-size-l: 18px;
+$font-size-xs: 12px;
+$font-size-tiny: 10px;
 
 // Padding & margins
+$spacing-tiny: 4px;
 $spacing-small: 8px;
 $spacing-medium: 16px;
 $spacing-large: 24px;

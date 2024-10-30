@@ -48,7 +48,7 @@
 	position: relative;
 	@include flex;
 	@include flex-column;
-	font-size: $font-size-xs;
+	font-size: $font-size-tiny;
 	font-weight: 400;
 	line-height: 13px;
 	letter-spacing: 1px;
