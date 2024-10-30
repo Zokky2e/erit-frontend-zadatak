@@ -1,0 +1,35 @@
+@import "styles";
+.corner-piece {
+	left: 0px;
+}
+.nav-bar {
+	@include flex;
+	@include flex-end;
+	gap: 7px;
+	height: 70px;
+	padding: 0 $spacing-medium;
+	background-color: $primary-color;
+	color: $font-color-light;
+
+	&--user {
+		&--mobile {
+			position: relative;
+			background-color: $base-color;
+			color: $font-color-dark;
+			padding: $spacing-small $spacing-medium;
+			display: none;
+			::ng-deep .corner-piece:first-of-type {
+				left: 0px !important;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-size-desktop) {
+		&--user--desktop {
+			display: none;
+		}
+		&--user--mobile {
+			@include flex;
+			@include flex-space-between;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import "styles"; //does not find import
+
+.corner-piece {
+	position: absolute;
+	top: 0px;
+
+	&--rotate {
+		transform: rotate(180deg);
+	}
+}

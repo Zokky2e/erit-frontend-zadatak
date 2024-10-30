@@ -1,0 +1,8 @@
+<div
+	class="user-side-menu-item"
+	[ngClass]="{ 'user-side-menu-item--selected': isSelected }"
+	(click)="itemClick()"
+>
+	<mat-icon>{{ item.icon }}</mat-icon>
+	<div class="item-label">{{ item.label }}</div>
+</div>

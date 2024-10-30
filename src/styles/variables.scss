@@ -18,9 +18,10 @@ $accent-3: #45ad20;
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 $font-family-base: "Open-Sans", sans-serif;
-$font-size-base: 16px;
-$font-size-small: 14px;
-$font-size-large: 18px;
+$font-size-m: 16px;
+$font-size-s: 14px;
+$font-size-xs: 10px;
+$font-size-l: 18px;
 
 // Padding & margins
 $spacing-small: 8px;
@@ -35,3 +36,6 @@ $box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 $app-primary: mat-palette($primary-color);
 $app-accent: mat-palette($accent-1, A200, A100, A400);
 $app-warn: mat-palette($alert);
+
+$screen-size-desktop: 600px;
+$screen-size-tablet: 360px;

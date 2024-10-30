@@ -1,0 +1,12 @@
+<div class="user-side-menu">
+	<ul class="user-side-menu--items">
+		<li *ngFor="let item of currentMenuItems">
+			<user-side-menu-item
+				[item]="item"
+				[isSelected]="item.label === selectedItemLabel"
+				(onItemClick)="onItemClicked($event)"
+			></user-side-menu-item>
+		</li>
+	</ul>
+	<corner-piece [inverted]="isScreenSmall"></corner-piece>
+</div>
