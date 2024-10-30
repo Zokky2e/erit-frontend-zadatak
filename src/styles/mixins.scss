@@ -1,0 +1,37 @@
+// mixins.scss
+
+// Flex
+@mixin flex {
+	display: flex;
+	align-items: center;
+}
+@mixin flex-center {
+	justify-content: center;
+}
+@mixin flex-space-between {
+	justify-content: space-between;
+}
+@mixin flex-end {
+	justify-content: end;
+}
+// Text styles
+@mixin heading-style($size, $color: $text-color) {
+	font-size: $size;
+	color: $color;
+	font-weight: 600;
+}
+
+// Default button
+@mixin button-style($bg-color: $primary-color, $text-color: #fff) {
+	background-color: $bg-color;
+	color: $text-color;
+	padding: $spacing-small $spacing-medium;
+	border-radius: $border-radius;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: darken($bg-color, 10%);
+	}
+}

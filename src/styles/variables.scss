@@ -1,0 +1,37 @@
+// Colors
+$primary-color: #003769;
+$font-color-dark: #00194a;
+$font-color-medium: #6c6c6c;
+$font-color-light: #ffffff;
+$disabled-dark: #a6a6a6;
+$disabled-light: #e0e0e0;
+
+$base-color: #f5f5f5;
+$base-color-blue: #e6f0fc;
+$base-color-darker: #eaeaea;
+
+$alert: #c9060e;
+$accent-1: #ed8133;
+$accent-2: #0f75da;
+$accent-3: #45ad20;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+$font-family-base: "Open-Sans", sans-serif;
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+
+// Padding & margins
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+//Border defaults
+$border-radius: 4px;
+$box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+// Material UI settings
+$app-primary: mat-palette($primary-color);
+$app-accent: mat-palette($accent-1, A200, A100, A400);
+$app-warn: mat-palette($alert);
