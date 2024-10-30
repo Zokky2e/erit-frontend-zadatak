@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { UserService } from "@core/services/user-service";
 import { IUser } from "@models/interfaces";
 
@@ -8,6 +8,8 @@ import { IUser } from "@models/interfaces";
 	styleUrl: "./nav-bar.component.scss",
 })
 export class NavBarComponent {
+	@Output() public onSideBarToggle: EventEmitter<string> =
+		new EventEmitter<string>();
 	public currentUser: IUser = { id: "" };
 
 	constructor(private userService: UserService) {}
@@ -20,5 +22,9 @@ export class NavBarComponent {
 		this.currentUser = user;
 		this.userService.updateUser(this.currentUser.id, this.currentUser);
 		this.currentUser = this.userService.getCurrentUser();
+	}
+
+	sideBarToggle(sideBarType: string) {
+		this.onSideBarToggle.emit(sideBarType);
 	}
 }

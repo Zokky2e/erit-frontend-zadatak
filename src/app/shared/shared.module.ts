@@ -9,6 +9,9 @@ import {
 } from "./components";
 import { MatIconModule } from "@angular/material/icon";
 import { FullNamePipe } from "./pipes/userName.pipe";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
 	declarations: [
@@ -19,7 +22,13 @@ import { FullNamePipe } from "./pipes/userName.pipe";
 		UserInfoBarComponent,
 		FullNamePipe,
 	],
-	imports: [CommonModule, MatIconModule],
+	imports: [
+		CommonModule,
+		MatIconModule,
+		MatSidenavModule,
+		MatDividerModule,
+		MatTooltipModule,
+	],
 	exports: [
 		NavBarComponent,
 		CornerPieceComponent,

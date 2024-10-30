@@ -1,9 +1,9 @@
 <div class="user-info-bar" (click)="onUserInfoBarClick()">
 	<div class="user-info-bar--info">
 		<span class="user-info-bar--name">{{ user | fullName }}</span
-		><span class="user-info-bar--role"
-			>| {{ selectedRole?.name ? selectedRole!.name : "" }}</span
-		>
+		><span class="user-info-bar--role">{{
+			selectedRole?.name ? selectedRole!.name : ""
+		}}</span>
 		<mat-icon
 			*ngIf="!isDrawerOpen"
 			aria-hidden="false"

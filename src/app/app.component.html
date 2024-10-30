@@ -1,4 +1,13 @@
-<nav-bar></nav-bar>
-<user-side-menu></user-side-menu>
-<main class="main"></main>
-<router-outlet />
+<div>
+	<mat-sidenav-container>
+		<mat-sidenav #sidenav mode="over" position="end">
+			<div *ngIf="isNotificationSideBar">Notifications</div>
+			<div *ngIf="!isNotificationSideBar">User Settings</div>
+		</mat-sidenav>
+		<nav-bar (onSideBarToggle)="onSideBarToggle($event)"></nav-bar>
+		<main class="main">
+			<user-side-menu></user-side-menu>
+			<router-outlet />
+		</main>
+	</mat-sidenav-container>
+</div>

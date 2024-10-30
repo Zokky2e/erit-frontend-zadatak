@@ -7,6 +7,7 @@ import { SharedModule } from "./shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import {
 	provideHttpClient,
 	withInterceptorsFromDi,
@@ -14,7 +15,13 @@ import {
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [BrowserModule, AppRoutingModule, CoreModule, SharedModule],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		CoreModule,
+		SharedModule,
+		MatSidenavModule,
+	],
 	providers: [
 		provideAnimationsAsync(),
 		provideHttpClient(withInterceptorsFromDi()),

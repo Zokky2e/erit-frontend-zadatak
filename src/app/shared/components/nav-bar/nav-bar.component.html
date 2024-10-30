@@ -5,14 +5,22 @@
 			(onUserRoleChange)="updateUserRole($event)"
 		></user-info-bar>
 	</div>
-	<div>
+	<div
+		style="cursor: pointer"
+		(click)="sideBarToggle('user-settings')"
+		matTooltip="User"
+	>
 		<mat-icon
 			aria-hidden="false"
 			aria-label="person"
 			fontIcon="person"
 		></mat-icon>
 	</div>
-	<div>
+	<div
+		style="cursor: pointer"
+		(click)="sideBarToggle('notifications')"
+		matTooltip="Notifications"
+	>
 		<mat-icon
 			aria-hidden="false"
 			aria-label="notifications"

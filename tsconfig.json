@@ -24,6 +24,7 @@
       "dom"
     ],
     "paths": {
+      "@components/*": ["./src/app/components/*"],
       "@models/*": ["./src/app/models/*"],
       "@core/*": ["./src/app/core/*"],
       "@shared/*": ["./src/app/shared/*"]
