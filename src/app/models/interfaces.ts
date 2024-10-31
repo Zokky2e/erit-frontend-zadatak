@@ -24,3 +24,19 @@ export interface INotificationType {
 	id: string;
 	type: string;
 }
+
+export interface IWarning {
+	id: string;
+	type: string;
+	dateCreated: Date;
+	description: string;
+}
+
+export interface IMessage {
+	id: string;
+	type: string;
+	dateCreated: Date;
+	title: string;
+	description: string;
+	isPinned?: boolean;
+}

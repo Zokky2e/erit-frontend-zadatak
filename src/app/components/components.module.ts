@@ -1,11 +1,36 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { DashboardComponent } from "./dashboard";
+import {
+	CardComponent,
+	DashboardComponent,
+	ListComponent,
+	MessageListItemComponent,
+	WarningsListItemComponent,
+} from "./dashboard";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatTableModule } from "@angular/material/table";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
-	imports: [CommonModule],
-	declarations: [DashboardComponent],
+	imports: [
+		CommonModule,
+		MatGridListModule,
+		MatTableModule,
+		MatExpansionModule,
+		MatCardModule,
+		MatIconModule,
+	],
+	declarations: [
+		DashboardComponent,
+		CardComponent,
+		WarningsListItemComponent,
+		ListComponent,
+		MessageListItemComponent,
+		MessageListItemComponent,
+	],
 	providers: [],
 	exports: [DashboardComponent],
 })
-export class CoreModule {}
+export class ComponentsModule {}

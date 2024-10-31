@@ -1,0 +1,111 @@
+@import "styles";
+
+.dashboard {
+	display: flex;
+	flex-wrap: wrap;
+}
+.dashboard-column {
+	width: calc(50% - 20px);
+	margin: 10px;
+	@media screen and (max-width: $screen-size-desktop) {
+		width: 100%;
+	}
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.dashboard-inner-item {
+	height: 300px;
+}
+
+.card-title {
+	color: $font-color-dark;
+	font-weight: 600;
+	font-size: $font-size-xl;
+	display: flex;
+	align-items: center;
+	height: 64px;
+}
+
+.card {
+	padding: 0 $spacing-xl $spacing-m;
+}
+
+.app-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.warning-item,
+.message-item {
+	display: flex;
+	align-items: center;
+	gap: $spacing-s;
+	margin-bottom: $spacing-m;
+	:last-of-type {
+		margin-bottom: 0;
+	}
+	mat-icon {
+		width: 24px;
+		font-size: 24px;
+		background-color: $accent-2;
+		color: $base-color;
+		border-radius: 45px;
+	}
+	color: $font-color-dark;
+}
+
+.message-item {
+	justify-content: space-between;
+	mat-icon {
+		width: 36px;
+		height: 32px;
+		font-size: 36px;
+		color: $accent-3;
+		border-radius: 0px;
+		background-color: transparent;
+	}
+}
+
+.pin-icon {
+	mat-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		font-size: 18px;
+		border-radius: 45px;
+		color: $base-color-darker;
+		background-color: $disabled-dark;
+	}
+}
+
+.disabled-icon {
+	mat-icon {
+		color: $disabled-dark;
+		background-color: $base-color-darker;
+	}
+}
+.warning-icon {
+	mat-icon {
+		width: 24px;
+		font-size: 24px;
+		border-radius: 45px;
+		color: $base-color;
+		background-color: $alert;
+	}
+}
+
+.sent-icon {
+	mat-icon {
+		width: 36px;
+		height: 32px;
+		font-size: 36px;
+		color: $alert;
+		border-radius: 0px;
+		background-color: transparent;
+	}
+}

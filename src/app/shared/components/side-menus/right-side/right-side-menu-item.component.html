@@ -22,7 +22,7 @@
 			class="side-menu-item--tiny side-menu-item--grey"
 			*ngIf="item.dateCreated"
 		>
-			{{ item.dateCreated | date }}
+			{{ item.dateCreated | date : "H:mm dd.MM.YYYY." }}
 		</div>
 	</div>
 </div>

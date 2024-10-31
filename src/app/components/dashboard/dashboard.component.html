@@ -1,1 +1,51 @@
-<div>dashboard</div>
+<div class="dashboard">
+	<div class="dashboard-column">
+		<card title="Warnings">
+			<div slot="noncloseable">
+				<app-list>
+					<li *ngFor="let warning of warnings">
+						<warning-list-item
+							[warning]="warning"
+						></warning-list-item>
+					</li>
+				</app-list>
+			</div>
+		</card>
+		<card title="New messages" [closeable]="true"
+			><div slot="closeable">
+				<app-list>
+					<li *ngFor="let message of newMessages">
+						<message-list-item
+							[message]="message"
+						></message-list-item>
+					</li>
+				</app-list>
+			</div>
+		</card>
+		<card title="Pinned messages" [closeable]="true"
+			><div slot="closeable">
+				<app-list>
+					<li *ngFor="let message of pinnedMessages">
+						<message-list-item
+							[message]="message"
+						></message-list-item>
+					</li>
+				</app-list>
+			</div>
+		</card>
+	</div>
+	<div class="dashboard-column">
+		<card title="Roster"
+			><div slot="noncloseable">List of Warnings</div>
+		</card>
+		<card title="Change requests | RECIEVED"
+			><div slot="noncloseable">List of Warnings</div>
+		</card>
+		<card title="Change requests | SENT"
+			><div slot="noncloseable">List of Warnings</div></card
+		>
+		<card title="Hours" [closeable]="true"
+			><div slot="closeable">List of Warnings</div></card
+		>
+	</div>
+</div>

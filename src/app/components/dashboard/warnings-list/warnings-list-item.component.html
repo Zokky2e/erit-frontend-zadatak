@@ -1,0 +1,10 @@
+<div class="warning-item">
+	<div class="warning-icon" *ngIf="warning?.type == 'warning'">
+		<mat-icon>priority_high</mat-icon>
+	</div>
+	<div *ngIf="warning?.type != 'warning'">
+		<mat-icon>check-circle</mat-icon>
+	</div>
+	<div>{{ warning?.dateCreated | date : "dd.MM.YYYY." }}</div>
+	<div>{{ warning?.description }}</div>
+</div>
