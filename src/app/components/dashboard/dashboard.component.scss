@@ -9,6 +9,7 @@
 	margin: 10px;
 	@media screen and (max-width: $screen-size-desktop) {
 		width: 100%;
+		margin: 10px 0px;
 	}
 	display: flex;
 	flex-direction: column;
@@ -36,8 +37,11 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	color: $font-color-dark;
 }
-
+.mat-elevation-z1 {
+	color: $font-color-dark;
+}
 .warning-item,
 .message-item {
 	display: flex;
@@ -55,6 +59,19 @@
 		border-radius: 45px;
 	}
 	color: $font-color-dark;
+}
+.table-item {
+	color: $font-color-dark;
+	text-align: center;
+}
+
+.table-row {
+	height: 36px !important;
+	margin-bottom: $spacing-m;
+}
+
+.table-header {
+	text-transform: uppercase;
 }
 
 .message-item {

@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 80px;
 	z-index: 2;
-	height: 100vh;
+	height: calc(100vh - 70px - $spacing-xl);
 	width: calc(100% - 70px - $spacing-xl);
 	margin: $spacing-xl;
 	margin-left: calc(70px + $spacing-xl);
@@ -11,6 +11,7 @@
 
 	@media screen and (max-width: $screen-size-desktop) {
 		margin-left: $spacing-xl;
+		height: calc(100vh - 70px - 60px - $spacing-xl * 2);
 		top: 100px;
 	}
 }

@@ -6,8 +6,10 @@
 	left: 0px;
 	width: 70px;
 	padding-top: 40px;
+	z-index: 3;
 	background-color: $primary-color;
 	color: $font-color-light;
+	height: 100%;
 	&--items {
 		width: 100%;
 		@include flex;
@@ -22,7 +24,6 @@
 	::ng-deep .corner-piece:first-of-type {
 		left: 70px !important;
 	}
-	height: 100%;
 	@media screen and (max-width: $screen-size-desktop) {
 		top: auto;
 		left: 0px;

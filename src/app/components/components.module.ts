@@ -5,6 +5,7 @@ import {
 	DashboardComponent,
 	ListComponent,
 	MessageListItemComponent,
+	TableComponent,
 	WarningsListItemComponent,
 } from "./dashboard";
 import { MatGridListModule } from "@angular/material/grid-list";
@@ -29,6 +30,7 @@ import { MatIconModule } from "@angular/material/icon";
 		ListComponent,
 		MessageListItemComponent,
 		MessageListItemComponent,
+		TableComponent,
 	],
 	providers: [],
 	exports: [DashboardComponent],

@@ -40,3 +40,22 @@ export interface IMessage {
 	description: string;
 	isPinned?: boolean;
 }
+
+export interface IRequest {
+	id: string;
+	type: string;
+	dateCreated: Date;
+	shift: string[];
+	roster: string;
+	sentTo: string;
+	status?: string[];
+}
+
+export interface IHours {
+	id: string;
+	licenseUnit: string;
+	role: string;
+	lastWork: Date;
+	period: string; //TODO create logic with startDate endDate
+	hours: string; //!should this be a timestamp or timerange?
+}

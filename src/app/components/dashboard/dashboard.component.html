@@ -35,17 +35,39 @@
 		</card>
 	</div>
 	<div class="dashboard-column">
-		<card title="Roster"
-			><div slot="noncloseable">List of Warnings</div>
-		</card>
+		<card title="Roster"><div slot="noncloseable">Roaster List</div> </card>
 		<card title="Change requests | RECIEVED"
-			><div slot="noncloseable">List of Warnings</div>
+			><div slot="noncloseable">
+				<app-table
+					#table
+					[items]="recievedChangeRequests"
+					[displayedColumns]="recievedChangeRequestsColumns"
+					[columnConfigs]="recievedChangeRequestsColumnsConfigs"
+				>
+				</app-table>
+			</div>
 		</card>
 		<card title="Change requests | SENT"
-			><div slot="noncloseable">List of Warnings</div></card
-		>
+			><div slot="noncloseable">
+				<app-table
+					[items]="sentChangeRequests"
+					[displayedColumns]="sentChangeRequestsColumns"
+					[columnConfigs]="sentChangeRequestsColumnsConfigs"
+				>
+				</app-table>
+			</div>
+		</card>
 		<card title="Hours" [closeable]="true"
-			><div slot="closeable">List of Warnings</div></card
-		>
+			><div slot="closeable">
+				<div slot="noncloseable">
+					<app-table
+						[items]="hours"
+						[displayedColumns]="hoursColumns"
+						[columnConfigs]="hoursColumnsConfigs"
+					>
+					</app-table>
+				</div>
+			</div>
+		</card>
 	</div>
 </div>

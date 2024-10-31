@@ -1,5 +1,4 @@
 import { Component, Input } from "@angular/core";
-import { IWarning } from "@models/interfaces";
 
 @Component({
 	selector: "app-list",

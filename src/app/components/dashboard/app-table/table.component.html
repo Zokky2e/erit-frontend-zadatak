@@ -1,0 +1,46 @@
+<table mat-table [dataSource]="items" [ngStyle]="{ color: 'red' }">
+	<ng-container
+		*ngFor="let column of columnConfigs"
+		[matColumnDef]="column.key"
+	>
+		<th class="table-item table-header" mat-header-cell *matHeaderCellDef>
+			{{ column.header }}
+		</th>
+		<td mat-cell *matCellDef="let element">
+			<div class="table-item" *ngIf="column.key === 'shift'">
+				{{ element[column.key][0] }}
+				<mat-icon style="vertical-align: middle">
+					arrow_right_alt
+				</mat-icon>
+				{{ element[column.key][1] }}
+			</div>
+			<div class="table-item" *ngIf="column.key === 'status'">
+				<mat-icon style="vertical-align: middle">
+					{{ element[column.key][0] }}</mat-icon
+				><mat-icon style="vertical-align: middle">
+					{{ element[column.key][1] }}</mat-icon
+				>
+			</div>
+			<div
+				class="table-item"
+				*ngIf="column.key !== 'shift' && column.key !== 'status'"
+			>
+				{{
+					column.renderer
+						? column.renderer(element)
+						: element[column.key]
+				}}
+			</div>
+		</td>
+	</ng-container>
+	<tr
+		class="table-row"
+		mat-header-row
+		*matHeaderRowDef="displayedColumns"
+	></tr>
+	<tr
+		class="table-row"
+		mat-row
+		*matRowDef="let row; columns: displayedColumns"
+	></tr>
+</table>
