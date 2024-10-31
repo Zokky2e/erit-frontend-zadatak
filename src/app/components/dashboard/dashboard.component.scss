@@ -60,18 +60,57 @@
 	}
 	color: $font-color-dark;
 }
+
+.message-pike {
+	display: block;
+	@media screen and (max-width: $screen-size-desktop) {
+		display: none;
+	}
+}
+
+.table {
+	width: 100% !important;
+}
+
+.table-icon {
+	mat-icon {
+		color: $accent-2;
+	}
+}
+
 .table-item {
 	color: $font-color-dark;
 	text-align: center;
+	padding: 0 $spacing-s;
+	@media screen and (max-width: $screen-size-desktop) {
+		padding: 0 !important;
+		font-size: $font-size-xs;
+	}
 }
 
 .table-row {
 	height: 36px !important;
+	width: auto;
 	margin-bottom: $spacing-m;
+	@media screen and (max-width: $screen-size-desktop) {
+		display: flex;
+		height: 24px !important;
+		padding: 0 !important;
+		margin: 0;
+	}
 }
 
 .table-header {
 	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.table-border {
+	border: none;
+	border-right: 1px solid rgba($font-color-dark, 0.2);
+	&:last-of-type {
+		border: none;
+	}
 }
 
 .message-item {

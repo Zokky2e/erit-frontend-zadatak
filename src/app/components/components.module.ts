@@ -13,6 +13,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
 	imports: [
@@ -22,6 +23,7 @@ import { MatIconModule } from "@angular/material/icon";
 		MatExpansionModule,
 		MatCardModule,
 		MatIconModule,
+		MatDividerModule,
 	],
 	declarations: [
 		DashboardComponent,

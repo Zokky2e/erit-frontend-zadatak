@@ -6,10 +6,12 @@
 		<div *ngIf="message?.type != 'sent'">
 			<mat-icon>mail</mat-icon>
 		</div>
-		<div>{{ message?.dateCreated | date : "dd.MM.YYYY." }}</div>
-		<div style="font-weight: 600">{{ message?.title }}</div>
-		<div style="font-weight: 600">|</div>
-		<div>{{ message?.description }}</div>
+		<div class="message-item">
+			<div>{{ message?.dateCreated | date : "dd.MM.YYYY." }}</div>
+			<div style="font-weight: 600">{{ message?.title }}</div>
+			<div class="message-pike" style="font-weight: 600">|</div>
+			<div>{{ message?.description }}</div>
+		</div>
 	</div>
 	<div>
 		<div class="pin-icon clickable" *ngIf="message?.isPinned">
