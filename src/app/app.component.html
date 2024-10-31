@@ -1,8 +1,17 @@
 <div>
 	<mat-sidenav-container>
-		<mat-sidenav #sidenav mode="over" position="end">
-			<div *ngIf="isNotificationSideBar">Notifications</div>
-			<div *ngIf="!isNotificationSideBar">User Settings</div>
+		<mat-sidenav
+			#sidenav
+			mode="over"
+			position="end"
+			[ngStyle]="{ width: sideBarWidth + 'px' }"
+		>
+			<right-side-menu *ngIf="!isNotificationSideBar">
+				<profile-menu></profile-menu>
+			</right-side-menu>
+			<right-side-menu *ngIf="isNotificationSideBar">
+				<notifications-menu></notifications-menu>
+			</right-side-menu>
 		</mat-sidenav>
 		<nav-bar (onSideBarToggle)="onSideBarToggle($event)"></nav-bar>
 		<main class="main">

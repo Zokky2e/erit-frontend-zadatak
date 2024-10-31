@@ -1,0 +1,58 @@
+@import "styles";
+
+.side-bar {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+}
+.profile {
+	margin-top: $spacing-l;
+}
+.menu {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	display: flex;
+	flex-direction: column;
+	mat-divider {
+		align-self: center;
+		background-color: $font-color-dark;
+		opacity: 0.3;
+		width: 90%;
+	}
+}
+.side-menu-title {
+	color: $font-color-dark;
+	padding: $spacing-m $spacing-xl;
+}
+.side-menu-item {
+	@include flex;
+	color: $font-color-dark;
+	gap: $spacing-l;
+	padding: $spacing-l $spacing-xl;
+	&--small {
+		font-size: $font-size-s;
+	}
+	&--tiny {
+		font-size: $font-size-tiny;
+	}
+	&--grey {
+		color: $font-color-medium !important;
+	}
+}
+
+.side-menu-icon {
+	color: $font-color-dark;
+	&--message {
+		color: $accent-1;
+	}
+	&--verified {
+		color: $accent-2;
+	}
+	&--grey {
+		color: $font-color-medium;
+	}
+}

@@ -1,0 +1,28 @@
+<div
+	class="side-menu-item hoverable"
+	[ngClass]="{ 'side-menu-item--grey read': item.isRead }"
+>
+	<mat-icon
+		class="side-menu-icon"
+		[ngClass]="{
+			'side-menu-icon--message': item.icon === 'chat',
+			'side-menu-icon--verified': item.icon === 'verified',
+			'side-menu-icon--grey': item.isRead
+		}"
+		>{{ item.icon }}</mat-icon
+	>
+	<div>
+		<div [ngClass]="{ 'side-menu-item--small': item.dateCreated }">
+			{{ item.title }}
+		</div>
+		<div class="side-menu-item--tiny" *ngIf="item.description">
+			{{ item.description }}
+		</div>
+		<div
+			class="side-menu-item--tiny side-menu-item--grey"
+			*ngIf="item.dateCreated"
+		>
+			{{ item.dateCreated | date }}
+		</div>
+	</div>
+</div>

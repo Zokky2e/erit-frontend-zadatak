@@ -1,0 +1,26 @@
+.hoverable {
+	position: relative;
+	cursor: pointer;
+	&::after {
+		content: "";
+		position: absolute;
+		height: 4px;
+		left: 0;
+		bottom: 0px;
+		width: 0px;
+		transition: width 0.2s;
+		background-color: $accent-2;
+		@media screen and (max-width: $screen-size-desktop) {
+			bottom: 0px;
+		}
+	}
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+.read {
+	&::after {
+		background-color: $font-color-medium;
+	}
+}

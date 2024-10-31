@@ -1,0 +1,15 @@
+<div class="menu">
+	<div class="side-menu-item">User Notifications</div>
+	<mat-divider></mat-divider>
+	<ul>
+		<li *ngFor="let item of todayNotifications">
+			<right-side-menu-item [item]="item"></right-side-menu-item>
+		</li>
+	</ul>
+	<div class="side-menu-title">Earlier</div>
+	<ul>
+		<li *ngFor="let item of oldNotifications">
+			<right-side-menu-item [item]="item"></right-side-menu-item>
+		</li>
+	</ul>
+</div>

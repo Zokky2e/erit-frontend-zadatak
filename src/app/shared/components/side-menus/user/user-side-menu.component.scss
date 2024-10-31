@@ -60,7 +60,6 @@
 		font-size: 24px;
 	}
 	&--selected {
-		content: "";
 		background-color: $accent-2;
 	}
 
@@ -69,24 +68,6 @@
 		@include flex-space-between;
 		padding: 8px 0px;
 	}
-}
-
-.user-side-menu-item::after {
-	content: "";
-	position: absolute;
-	height: 4px;
-	left: 0;
-	bottom: 0px;
-	width: 0%;
-	background-color: $accent-2;
-	transform: width 0.2s;
-	@media screen and (max-width: $screen-size-desktop) {
-		bottom: 0px;
-	}
-}
-
-.user-side-menu-item:hover::after {
-	width: 100%;
 }
 
 @media screen and (max-width: $screen-size-tablet) {

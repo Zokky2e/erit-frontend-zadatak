@@ -1,0 +1,9 @@
+<div class="profile menu">
+	<ul>
+		<li *ngFor="let item of profileItems">
+			<right-side-menu-item [item]="item"></right-side-menu-item>
+		</li>
+	</ul>
+	<mat-divider></mat-divider>
+	<right-side-menu-item [item]="logoutItem"></right-side-menu-item>
+</div>

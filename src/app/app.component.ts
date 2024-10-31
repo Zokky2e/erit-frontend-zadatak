@@ -10,8 +10,11 @@ export class AppComponent {
 	@ViewChild("sidenav") public sidenav: MatSidenav | undefined;
 	title = "Erit Frontend Zadatak";
 	isNotificationSideBar: boolean = false;
+	sideBarWidth: number = 230;
+
 	onSideBarToggle(event: string) {
 		this.isNotificationSideBar = event === "notifications";
+		this.sideBarWidth = this.isNotificationSideBar ? 290 : 230;
 		this.sidenav!.toggle();
 	}
 }

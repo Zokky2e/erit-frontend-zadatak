@@ -3,14 +3,18 @@
 	position: fixed;
 	top: 80px;
 	left: 70px;
-	margin: calc($spacing-large * 2);
+	margin: calc($spacing-xl * 2);
 
 	@media screen and (max-width: $screen-size-desktop) {
 		left: auto;
 		top: 100px;
-		margin: $spacing-large;
+		margin: $spacing-xl;
 	}
 }
 mat-sidenav-container {
 	height: 100vh;
+}
+
+mat-sidenav {
+	background-color: $base-color-blue;
 }

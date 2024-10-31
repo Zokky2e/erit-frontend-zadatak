@@ -3,6 +3,9 @@ import { CommonModule } from "@angular/common";
 import {
 	CornerPieceComponent,
 	NavBarComponent,
+	NotificationsMenuComponent,
+	RightSideMenuComponent,
+	RightSideMenuItemComponent,
 	UserInfoBarComponent,
 	UserSideMenuComponent,
 	UserSideMenuItemComponent,
@@ -12,6 +15,7 @@ import { FullNamePipe } from "./pipes/userName.pipe";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { ProfileMenuComponent } from "./components/side-menus/right-side/profile/profile-menu.component";
 
 @NgModule({
 	declarations: [
@@ -21,6 +25,10 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 		UserSideMenuItemComponent,
 		UserInfoBarComponent,
 		FullNamePipe,
+		RightSideMenuComponent,
+		RightSideMenuItemComponent,
+		ProfileMenuComponent,
+		NotificationsMenuComponent,
 	],
 	imports: [
 		CommonModule,
@@ -34,6 +42,9 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 		CornerPieceComponent,
 		UserSideMenuComponent,
 		FullNamePipe,
+		RightSideMenuComponent,
+		ProfileMenuComponent,
+		NotificationsMenuComponent,
 	],
 })
 export class SharedModule {}

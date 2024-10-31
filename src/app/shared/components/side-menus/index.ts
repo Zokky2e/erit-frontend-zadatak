@@ -1,2 +1,2 @@
-export * from "./user-side-menu-item.component";
-export * from "./user-side-menu.component";
+export * from "./right-side";
+export * from "./user";

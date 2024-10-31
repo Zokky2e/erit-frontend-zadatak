@@ -4,7 +4,7 @@ import { IUserSideMenuItem } from "./user-side-menu-item.component";
 @Component({
 	selector: "user-side-menu",
 	templateUrl: "./user-side-menu.component.html",
-	styleUrl: "./side-menu.component.scss",
+	styleUrl: "./user-side-menu.component.scss",
 })
 export class UserSideMenuComponent {
 	public isScreenSmall: boolean = false;

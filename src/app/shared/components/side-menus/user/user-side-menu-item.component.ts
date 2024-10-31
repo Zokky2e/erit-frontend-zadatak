@@ -8,7 +8,7 @@ export interface IUserSideMenuItem {
 @Component({
 	selector: "user-side-menu-item",
 	templateUrl: "./user-side-menu-item.component.html",
-	styleUrl: "./side-menu.component.scss",
+	styleUrl: "./user-side-menu.component.scss",
 })
 export class UserSideMenuItemComponent {
 	@Input() public item: IUserSideMenuItem = {};

@@ -7,7 +7,7 @@
 	@include flex-end;
 	gap: 7px;
 	height: 70px;
-	padding: 0 $spacing-medium;
+	padding: 0 $spacing-l;
 	background-color: $primary-color;
 	color: $font-color-light;
 
@@ -16,7 +16,7 @@
 			position: relative;
 			background-color: $base-color-darker;
 			color: $font-color-dark;
-			padding: $spacing-small $spacing-medium;
+			padding: $spacing-xs $spacing-l;
 			display: none;
 			::ng-deep .corner-piece:first-of-type {
 				left: 0px !important;
@@ -84,13 +84,13 @@
 	li {
 		cursor: pointer;
 		font-size: $font-size-l;
-		padding: $spacing-small $spacing-large;
+		padding: $spacing-xs $spacing-xl;
 		&:hover {
 			background-color: $accent-2;
 		}
 
 		@media screen and (max-width: $screen-size-desktop) {
-			padding: $spacing-small $spacing-medium;
+			padding: $spacing-xs $spacing-l;
 			font-size: $font-size-xs;
 			&:hover {
 				background-color: $accent-1;

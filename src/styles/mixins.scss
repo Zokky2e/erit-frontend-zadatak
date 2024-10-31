@@ -32,7 +32,7 @@
 @mixin button-style($bg-color: $primary-color, $text-color: #fff) {
 	background-color: $bg-color;
 	color: $text-color;
-	padding: $spacing-small $spacing-medium;
+	padding: $spacing-xs $spacing-l;
 	border-radius: $border-radius;
 	border: none;
 	cursor: pointer;
