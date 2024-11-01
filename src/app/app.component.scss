@@ -1,17 +1,15 @@
 @import "styles";
 .main {
 	position: fixed;
-	top: 80px;
 	z-index: 2;
-	height: calc(100vh - 70px - $spacing-xl);
+	height: calc(100vh - 70px - $spacing-l);
 	width: calc(100% - 70px - $spacing-xl);
-	margin: $spacing-xl;
-	margin-left: calc(70px + $spacing-xl);
+	margin-left: calc(70px + $spacing-l);
 	overflow: auto;
 
 	@media screen and (max-width: $screen-size-desktop) {
 		margin-left: $spacing-xl;
-		height: calc(100vh - 70px - 60px - $spacing-xl * 2);
+		height: calc(100vh - 90px - $spacing-xl * 2);
 		width: calc(100% - $spacing-xl * 2);
 		top: 100px;
 	}

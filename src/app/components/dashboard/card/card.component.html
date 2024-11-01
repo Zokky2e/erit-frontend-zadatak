@@ -1,12 +1,12 @@
 <div *ngIf="!closeable">
-	<mat-card appearance="outlined" class="card">
+	<mat-card appearance="outlined">
 		<div class="card-title">{{ title }}</div>
 		<ng-content select="[slot='noncloseable']"></ng-content>
 	</mat-card>
 </div>
 <div *ngIf="closeable">
 	<mat-accordion>
-		<mat-expansion-panel expanded="true">
+		<mat-expansion-panel expanded="true" class="expansion-panel">
 			<mat-expansion-panel-header>
 				<mat-panel-title class="card-title">
 					{{ title }}

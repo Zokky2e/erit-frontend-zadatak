@@ -3,6 +3,7 @@
 .dashboard {
 	display: flex;
 	flex-wrap: wrap;
+	margin: $spacing-xl 0;
 }
 .dashboard-column {
 	width: calc(50% - 20px);
@@ -21,16 +22,26 @@
 }
 
 .card-title {
+	padding: 0 $spacing-xl;
 	color: $font-color-dark;
 	font-weight: 600;
 	font-size: $font-size-xl;
 	display: flex;
 	align-items: center;
 	height: 64px;
+	margin: 0;
+	@media screen and (max-width: $screen-size-small-desktop) {
+		font-size: $font-size-m;
+		height: 48px;
+	}
 }
 
-.card {
-	padding: 0 $spacing-xl $spacing-m;
+::ng-deep {
+	mat-expansion-panel {
+		.mat-expansion-panel-body {
+			padding: 0;
+		}
+	}
 }
 
 .app-list {
@@ -38,7 +49,15 @@
 	padding: 0;
 	margin: 0;
 	color: $font-color-dark;
+	@media screen and (max-width: $screen-size-small-desktop) {
+		font-size: $font-size-s;
+	}
 }
+
+.card {
+	padding: 0 $spacing-xl $spacing-m;
+}
+
 .mat-elevation-z1 {
 	color: $font-color-dark;
 }
@@ -51,7 +70,7 @@
 	:last-of-type {
 		margin-bottom: 0;
 	}
-	mat-icon {
+	div.mat-icon {
 		width: 24px;
 		font-size: 24px;
 		background-color: $accent-2;
@@ -59,6 +78,60 @@
 		border-radius: 45px;
 	}
 	color: $font-color-dark;
+	@media screen and (max-width: $screen-size-small-desktop) {
+		display: none;
+	}
+}
+
+.warning-item-mobile {
+	display: flex;
+	align-items: center;
+	gap: $spacing-s;
+	margin-bottom: $spacing-m;
+	:last-of-type {
+		margin-bottom: 0;
+	}
+	div.mat-icon {
+		width: 24px;
+		font-size: 24px;
+		background-color: $accent-2;
+		color: $base-color;
+		border-radius: 45px;
+	}
+	color: $font-color-dark;
+	@media screen and (min-width: $screen-size-small-desktop) {
+		display: none;
+	}
+}
+
+.message-item-mobile {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: $spacing-s;
+	margin-bottom: $spacing-m;
+	:last-of-type {
+		margin-bottom: 0;
+	}
+	&--icons {
+		flex-direction: column;
+		align-items: center;
+	}
+	&--body {
+		flex-direction: row;
+		align-items: center;
+	}
+	mat-icon {
+		width: 36px;
+		height: 36px;
+		font-size: 36px;
+		color: $accent-3;
+		background-color: transparent;
+	}
+	color: $font-color-dark;
+	@media screen and (min-width: $screen-size-small-desktop) {
+		display: none;
+	}
 }
 
 .message-pike {
@@ -70,6 +143,10 @@
 
 .table {
 	width: 100% !important;
+	padding: $spacing-m 0 $spacing-m;
+	@media screen and (max-width: $screen-size-small-desktop) {
+		padding: 0;
+	}
 }
 
 .table-icon {
@@ -81,7 +158,7 @@
 .table-item {
 	color: $font-color-dark;
 	text-align: center;
-	padding: 0 $spacing-s;
+	padding: $spacing-s 0px;
 	@media screen and (max-width: $screen-size-desktop) {
 		padding: 0 !important;
 		font-size: $font-size-xs;
@@ -89,12 +166,10 @@
 }
 
 .table-row {
-	height: 36px !important;
-	width: auto;
-	margin-bottom: $spacing-m;
+	display: flex;
+	justify-content: space-around;
+	height: fit-content;
 	@media screen and (max-width: $screen-size-desktop) {
-		display: flex;
-		height: 24px !important;
 		padding: 0 !important;
 		margin: 0;
 	}
@@ -102,12 +177,12 @@
 
 .table-header {
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: 600;
 }
 
 .table-border {
 	border: none;
-	border-right: 1px solid rgba($font-color-dark, 0.2);
 	&:last-of-type {
 		border: none;
 	}
@@ -130,8 +205,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 32px;
-		height: 32px;
+		width: 36px;
+		height: 36px;
 		font-size: 18px;
 		border-radius: 45px;
 		color: $base-color-darker;

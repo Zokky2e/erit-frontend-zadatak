@@ -13,7 +13,7 @@
 			<div>{{ message?.description }}</div>
 		</div>
 	</div>
-	<div>
+	<div class="message-item">
 		<div class="pin-icon clickable" *ngIf="message?.isPinned">
 			<mat-icon>push_pin</mat-icon>
 		</div>
@@ -23,5 +23,31 @@
 		>
 			<mat-icon>push_pin</mat-icon>
 		</div>
+	</div>
+</div>
+
+<div class="message-item-mobile">
+	<div class="message-item-mobile--icons">
+		<div class="sent-icon" *ngIf="message?.type == 'sent'">
+			<mat-icon>mail</mat-icon>
+		</div>
+		<div *ngIf="message?.type != 'sent'">
+			<mat-icon>mail</mat-icon>
+		</div>
+		<div class="pin-icon clickable" *ngIf="message?.isPinned">
+			<mat-icon>push_pin</mat-icon>
+		</div>
+		<div
+			class="pin-icon disabled-icon clickable"
+			*ngIf="!message?.isPinned"
+		>
+			<mat-icon>push_pin</mat-icon>
+		</div>
+	</div>
+	<div class="message-item-mobile message-item-mobile--body">
+		<div>{{ message?.dateCreated | date : "dd.MM.YYYY." }}</div>
+		<div style="font-weight: 600">{{ message?.title }}</div>
+		<div class="message-pike" style="font-weight: 600">|</div>
+		<div>{{ message?.description }}</div>
 	</div>
 </div>

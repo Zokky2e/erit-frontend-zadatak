@@ -13,6 +13,7 @@
 
 	&--user {
 		&--mobile {
+			z-index: 3;
 			position: relative;
 			background-color: $base-color-darker;
 			color: $font-color-dark;
