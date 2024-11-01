@@ -14,12 +14,17 @@
 		</div>
 	</div>
 	<div class="message-item">
-		<div class="pin-icon clickable" *ngIf="message?.isPinned">
+		<div
+			class="pin-icon clickable"
+			*ngIf="message?.isPinned"
+			(click)="onChangePingStateClick()"
+		>
 			<mat-icon>push_pin</mat-icon>
 		</div>
 		<div
 			class="pin-icon disabled-icon clickable"
 			*ngIf="!message?.isPinned"
+			(click)="onChangePingStateClick()"
 		>
 			<mat-icon>push_pin</mat-icon>
 		</div>
@@ -34,12 +39,17 @@
 		<div *ngIf="message?.type != 'sent'">
 			<mat-icon>mail</mat-icon>
 		</div>
-		<div class="pin-icon clickable" *ngIf="message?.isPinned">
+		<div
+			class="pin-icon clickable"
+			*ngIf="message?.isPinned"
+			(click)="onChangePingStateClick()"
+		>
 			<mat-icon>push_pin</mat-icon>
 		</div>
 		<div
 			class="pin-icon disabled-icon clickable"
 			*ngIf="!message?.isPinned"
+			(click)="onChangePingStateClick()"
 		>
 			<mat-icon>push_pin</mat-icon>
 		</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { IMessage } from "@models/interfaces";
 
 @Component({
@@ -8,4 +8,11 @@ import { IMessage } from "@models/interfaces";
 })
 export class MessageListItemComponent {
 	@Input() message: IMessage | undefined;
+	@Output() changePinState: EventEmitter<IMessage> =
+		new EventEmitter<IMessage>();
+
+	onChangePingStateClick() {
+		this.message!.isPinned = !this.message?.isPinned;
+		this.changePinState.emit(this.message);
+	}
 }

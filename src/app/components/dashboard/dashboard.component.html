@@ -17,6 +17,7 @@
 					<li *ngFor="let message of newMessages">
 						<message-list-item
 							[message]="message"
+							(changePinState)="onChangePinState($event)"
 						></message-list-item>
 					</li>
 				</app-list>
@@ -28,6 +29,7 @@
 					<li *ngFor="let message of pinnedMessages">
 						<message-list-item
 							[message]="message"
+							(changePinState)="onChangePinState($event)"
 						></message-list-item>
 					</li>
 				</app-list>

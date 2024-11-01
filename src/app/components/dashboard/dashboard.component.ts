@@ -64,8 +64,7 @@ export class DashboardComponent {
 			});
 
 		this.warnings = this.warningService.getWarnings();
-		this.newMessages = this.messagesService.getMessages();
-		this.pinnedMessages = this.messagesService.getMessages(true);
+		this.getMessages();
 		this.recievedChangeRequests =
 			this.requestsService.getRequests("recieved");
 		this.sentChangeRequests = this.requestsService.getRequests("sent");
@@ -141,5 +140,15 @@ export class DashboardComponent {
 			{ key: "period", header: "Period" },
 			{ key: "hours", header: "Hours" },
 		];
+	}
+
+	onChangePinState(message: IMessage) {
+		this.messagesService.updateMessage(message.id, message);
+		this.getMessages();
+	}
+
+	getMessages() {
+		this.newMessages = this.messagesService.getMessages();
+		this.pinnedMessages = this.messagesService.getMessages(true);
 	}
 }
